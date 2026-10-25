@@ -2,6 +2,7 @@ package com.example.keymapper.display
 
 import android.content.Context
 import android.content.res.Configuration
+import android.content.res.Configuration.DENSITY_DEFAULT
 import android.graphics.Point
 import android.graphics.RectF
 import android.os.Build

@@ -254,7 +254,7 @@ class HudView(ctx: Context, private val host: Host) : View(ctx) {
     }
 
     private fun cycleKind() {
-        mutate { s -> s.copy(buttons = s.buttons.map { if (it.id == selected) it.copy(kind = (it.kind + 1) % 5) else it }) }
+        mutate { s -> s.copy(buttons = s.buttons.map { if (it.id == selected) it.copy(kind = Kind.entries[(it.kind.ordinal + 1) % Kind.entries.size]) else it }) }
         host.persist()
         Haptics.tick(context)
     }

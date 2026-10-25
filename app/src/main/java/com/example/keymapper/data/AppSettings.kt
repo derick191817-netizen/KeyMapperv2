@@ -9,7 +9,7 @@ data class HudButton(
     val y: Float,
     val size: Float = 0.08f,
     val opacity: Float = 0.8f,
-    val kind: Int = 0,
+    val kind: Kind = Kind.NORMAL,
     val macro: List<Int> = emptyList()
 )
 

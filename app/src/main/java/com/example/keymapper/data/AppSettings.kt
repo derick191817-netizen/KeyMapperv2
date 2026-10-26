@@ -16,12 +16,7 @@ data class HudButton(
 data class AppSettings(
     val areaMode: Int = 0,
     val areaRatio: Float = 16f / 9f,
-    val areaX: Float = 0f,
-    val areaY: Float = 0f,
-    val areaW: Float = 1f,
-    val areaH: Float = 1f,
     val uiScale: Float = 1f,
-    val globalSens: Float = 1f,
     val joyR: Float = 0.12f,
     val lookR: Float = 0.25f,
     val joyX: Float = 0.15f,
@@ -35,7 +30,13 @@ data class AppSettings(
     val refreshHz: Int = 60,
     val editKey: Int = -1,
     val pauseKey: Int = -2,
-    val haptics: Boolean = true
+    val haptics: Boolean = true,
+    // NOVAS CONFIGURAÇÕES DE MOUSE (ESTILO WINDOWS)
+    val pointerSpeed: Float = 10f, // 1 a 20
+    val enhancePrecision: Boolean = true, // Aceleração do Windows
+    val sensX: Float = 1.0f,
+    val sensY: Float = 1.0f,
+    val deadzone: Float = 0.0f
 )
 
 fun keyLabel(key: Int): String = when (key) {

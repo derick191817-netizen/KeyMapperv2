@@ -84,7 +84,7 @@ object DisplayUtils {
 
     fun applyDexPreset(s: AppSettings): AppSettings = s.copy(
         uiScale = 1.25f,
-        globalSens = 0.85f,
+        sensX = 0.85f, sensY = 0.85f,
         joyR = minOf(s.joyR, 0.08f),
         lookR = minOf(s.lookR, 0.16f),
         buttons = s.buttons.map { it.copy(size = minOf(it.size, 0.055f)) }

@@ -16,6 +16,10 @@ data class HudButton(
 data class AppSettings(
     val areaMode: Int = 0,
     val areaRatio: Float = 16f / 9f,
+    val areaX: Float = 0f,
+    val areaY: Float = 0f,
+    val areaW: Float = 1f,
+    val areaH: Float = 1f,
     val uiScale: Float = 1f,
     val joyR: Float = 0.12f,
     val lookR: Float = 0.25f,
@@ -31,9 +35,10 @@ data class AppSettings(
     val editKey: Int = -1,
     val pauseKey: Int = -2,
     val haptics: Boolean = true,
-    // NOVAS CONFIGURAÇÕES DE MOUSE (ESTILO WINDOWS)
-    val pointerSpeed: Float = 10f, // 1 a 20
-    val enhancePrecision: Boolean = true, // Aceleração do Windows
+    
+    // CONFIGURAÇÕES DE MOUSE (ESTILO WINDOWS)
+    val pointerSpeed: Float = 10f,
+    val enhancePrecision: Boolean = true,
     val sensX: Float = 1.0f,
     val sensY: Float = 1.0f,
     val deadzone: Float = 0.0f

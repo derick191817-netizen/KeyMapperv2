@@ -44,7 +44,6 @@ object DisplayUtils {
             h = p.y
         }
         val dm = windowCtx.resources.displayMetrics
-        // Correção Profissional: Usando 160 (DENSITY_DEFAULT) diretamente para evitar conflito de importação
         val dpi = if (dm.densityDpi > 0) dm.densityDpi else 160
         val density = if (dm.density > 0f) dm.density else dpi / 160f
         return ScreenInfo(display.displayId, w, h, dpi, density, display.refreshRate, display.displayId != Display.DEFAULT_DISPLAY)
@@ -84,7 +83,8 @@ object DisplayUtils {
 
     fun applyDexPreset(s: AppSettings): AppSettings = s.copy(
         uiScale = 1.25f,
-        sensX = 0.85f, sensY = 0.85f,
+        sensX = 0.85f, // Corrigido para a nova variável
+        sensY = 0.85f, // Corrigido para a nova variável
         joyR = minOf(s.joyR, 0.08f),
         lookR = minOf(s.lookR, 0.16f),
         buttons = s.buttons.map { it.copy(size = minOf(it.size, 0.055f)) }
